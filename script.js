@@ -38,7 +38,6 @@ $(document).ready(function () {
     let lineDiv = $("#lineDiv");
     let score = 1;
 
-
     let gameOver = false;
     deleteBalloon();
     flowDownBalloon();
@@ -52,21 +51,23 @@ $(document).ready(function () {
     let lineHeight=parseInt(lineDiv.height());
     let lineWidth=parseInt(lineDiv.width());
     // let lineHeight = 90;
+    let heightOfBalloon = parseInt(balloons.css("bottom","75vh"));
+
 
     function repeat() {
-        if (gameOver === false) {
-            if (balloonHeight == lineHeight) {
-                balloonHeight = -550;
-            }
-        }
+        let balloonCurrentPlace=balloons.offset();
+      if (balloonCurrentPlace===15){
+          $("#topic").css("color","red");
+      }
     }
 
 
     function restart() {
-        if (balloonHeight===lineHeight) {
-            gameDiv.text("Game Over");
-            h1Score.css("color","red");
-        }
+
+        // if (bottom===0) {
+        //     gameDiv.text("Game Over");
+        //     h1Score.css("color","red");
+        // }
     }
 
 
@@ -78,7 +79,7 @@ $(document).ready(function () {
             $("#balloon10").show();
             $("#h1Score").text(score);
             score++;
-            // $("#balloon10").css("top","0");
+            // $("#balloon10").style("top :75vh");
         });
 
         $("#balloon2").click(function () {
@@ -87,7 +88,7 @@ $(document).ready(function () {
             score++;
             scoreDiv = score;
             $("#balloon9").show();
-            // $("#balloon9").css("top","0");
+            // $("#balloon9").style("bottom :75vh");
         });
 
         $("#balloon3").click(function () {
@@ -95,7 +96,7 @@ $(document).ready(function () {
             $("#h1Score").text(score);
             score++;
             $("#balloon8").show();
-            // $("#balloon8").css("top","0");
+            // $("#balloon8").style("bottom :75vh");
         });
 
         $("#balloon4").click(function () {
@@ -104,7 +105,7 @@ $(document).ready(function () {
             score++;
             scoreDiv = score;
             $("#balloon7").show();
-            // $("#balloon7").css("top","0");
+            // $("#balloon7").style("bottom :75vh");
         });
 
         $("#balloon5").click(function () {
@@ -113,7 +114,7 @@ $(document).ready(function () {
             score++;
             scoreDiv = score;
             $("#balloon6").show();
-            // $("#balloon6").css("top","0");
+            // $("#balloon6").style("bottom :75vh");
         });
 
         $("#balloon6").click(function () {
@@ -122,7 +123,7 @@ $(document).ready(function () {
             score++;
             scoreDiv = score;
             $("#balloon1").show();
-            // $("#balloon1").css("top","0");
+            // $("#balloon1").style("bottom :75vh");
         });
         $("#balloon7").click(function () {
             $(this).hide();
@@ -130,7 +131,7 @@ $(document).ready(function () {
             score++;
             scoreDiv = score;
             $("#balloon2").show();
-            // $("#balloon2").css("top","0");
+            // $("#balloon2").style("bottom :75vh");
         });
         $("#balloon8").click(function () {
             $(this).hide();
@@ -138,7 +139,7 @@ $(document).ready(function () {
             score++;
             scoreDiv = score;
             $("#balloon3").show();
-            // $("#balloon3").css("top","0");
+            // $("#balloon3").style("bottom :75vh");
         });
         $("#balloon9").click(function () {
             $(this).hide();
@@ -146,7 +147,7 @@ $(document).ready(function () {
             score++;
             scoreDiv = score;
             $("#balloon2").show();
-            // $("#balloon2").css("top","0");
+            // $("#balloon2").style("bottom","85vh");
         });
         $("#balloon10").click(function () {
             $(this).hide();
@@ -154,7 +155,7 @@ $(document).ready(function () {
             score++;
             scoreDiv = score;
             $("#balloon1").show();
-            // $("#balloon1").css("top","0");
+            // $("#balloon1").style("bottom","75vh");
         });
 
 
