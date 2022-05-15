@@ -69,7 +69,7 @@ $(document).ready(function () {
         // let linePlace=parseInt(lineDiv.height());
         // $("#topic").text(linePlace)
         let balloonTop=parseInt(balloons.height());
-        $("#h1Score").text(balloonTop);
+        // $("#h1Score").text(balloonTop);
         if (balloonTop!=333) {
             repeat();
         }else {
