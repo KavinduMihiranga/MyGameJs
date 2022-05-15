@@ -23,6 +23,7 @@
     position: absolute;
     border-radius: 50px 50px 50px 50px;
     cursor: pointer;
+
 }
 #balloon1{
    background-color: blue;
@@ -51,10 +52,12 @@
 #balloon6{
     background-color: darkcyan;
     left: 55vw;
+
 }
 #balloon7{
     background-color: lightblue;
-    left: 35vw; 
+    left: 35vw;
+
 
 }#balloon8{
     background-color: lightgreen;
@@ -107,4 +110,8 @@
     background-color: black;
     top: 70vh;
     position: absolute
+}
+#h1Score{
+    top: -5vh;
+    position: absolute;
 }

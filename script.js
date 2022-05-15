@@ -12,7 +12,20 @@ $(document).ready(function () {
     let balloon8 = $("#balloon8");
     let balloon9 = $("#balloon9");
     let balloon10 = $("#balloon10");
+    let h1Score=$("#h1Score");
 
+    let balloonArray = {
+        balloon1,
+        balloon2,
+        balloon3,
+        balloon4,
+        balloon5,
+        balloon6,
+        balloon7,
+        balloon8,
+        balloon9,
+        balloon10
+    }
     $("#balloon6").hide();
     $("#balloon7").hide();
     $("#balloon8").hide();
@@ -24,19 +37,35 @@ $(document).ready(function () {
     let scoreDiv = $("#scoreDiv");
     let lineDiv = $("#lineDiv");
     let score = 1;
-    let speed = 5;
+
+
     let gameOver = false;
     deleteBalloon();
     flowDownBalloon();
     restart();
+
+
     repeat();
 
     let balloonHeight = parseInt(gameDiv.height());
     let balloonWidth = parseInt(gameDiv.width());
+    let lineHeight=parseInt(lineDiv.height());
+    let lineWidth=parseInt(lineDiv.width());
+    // let lineHeight = 90;
+
+    function repeat() {
+        if (gameOver === false) {
+            if (balloonHeight == lineHeight) {
+                balloonHeight = -550;
+            }
+        }
+    }
+
 
     function restart() {
-        if (gameDiv == lineDiv) {
+        if (balloonHeight===lineHeight) {
             gameDiv.text("Game Over");
+            h1Score.css("color","red");
         }
     }
 
@@ -44,67 +73,88 @@ $(document).ready(function () {
     function deleteBalloon() {
         $("#balloon1").click(function () {
             $(this).hide();
-            score++;
             scoreDiv = score;
+            let speed = 250;
             $("#balloon10").show();
+            $("#h1Score").text(score);
+            score++;
+            // $("#balloon10").css("top","0");
         });
 
         $("#balloon2").click(function () {
             $(this).hide();
+            $("#h1Score").text(score);
             score++;
             scoreDiv = score;
             $("#balloon9").show();
+            // $("#balloon9").css("top","0");
         });
 
         $("#balloon3").click(function () {
             $(this).hide();
-            scoreDiv = 0;
+            $("#h1Score").text(score);
+            score++;
             $("#balloon8").show();
+            // $("#balloon8").css("top","0");
         });
 
         $("#balloon4").click(function () {
             $(this).hide();
+            $("#h1Score").text(score);
             score++;
             scoreDiv = score;
             $("#balloon7").show();
+            // $("#balloon7").css("top","0");
         });
 
         $("#balloon5").click(function () {
             $(this).hide();
+            $("#h1Score").text(score);
             score++;
             scoreDiv = score;
             $("#balloon6").show();
+            // $("#balloon6").css("top","0");
         });
 
         $("#balloon6").click(function () {
             $(this).hide();
+            $("#h1Score").text(score);
             score++;
             scoreDiv = score;
             $("#balloon1").show();
+            // $("#balloon1").css("top","0");
         });
         $("#balloon7").click(function () {
             $(this).hide();
+            $("#h1Score").text(score);
             score++;
             scoreDiv = score;
             $("#balloon2").show();
+            // $("#balloon2").css("top","0");
         });
         $("#balloon8").click(function () {
             $(this).hide();
+            $("#h1Score").text(score);
             score++;
             scoreDiv = score;
             $("#balloon3").show();
+            // $("#balloon3").css("top","0");
         });
         $("#balloon9").click(function () {
             $(this).hide();
+            $("#h1Score").text(score);
             score++;
             scoreDiv = score;
             $("#balloon2").show();
+            // $("#balloon2").css("top","0");
         });
         $("#balloon10").click(function () {
             $(this).hide();
+            $("#h1Score").text(score);
             score++;
             scoreDiv = score;
             $("#balloon1").show();
+            // $("#balloon1").css("top","0");
         });
 
 
@@ -115,7 +165,6 @@ $(document).ready(function () {
             let speed1 = 100;
             $("#balloon1").animate({bottom: "-0vh"}, speed1 * speed1, "linear");
             speed1++;
-
         })
         $("#startDiv").click(function () {
             let speed2 = 125;
@@ -137,31 +186,46 @@ $(document).ready(function () {
             $("#balloon5").animate({bottom: "-0vh"}, speed5 * speed5, "linear");
             speed5++;
         })
-        $("#balloon1").click(function () {
+        $("#startDiv").click(function () {
             let speed6 = 250;
             $("#balloon6").animate({bottom: "-0vh"}, speed6 * speed6, "linear");
             speed6++;
         })
-        $("#balloon2").click(function () {
-            let speed7 = 250;
+        $("#startDiv").click(function () {
+            let speed7 = 125;
             $("#balloon7").animate({bottom: "-0vh"}, speed7 * speed7, "linear");
             speed7++;
         })
-        $("#balloon3").click(function () {
+        $("#startDiv").click(function () {
             let speed8 = 200;
             $("#balloon8").animate({bottom: "-0vh"}, speed8 * speed8, "linear");
             speed8++;
         })
-        $("#balloon4").click(function () {
-            let speed9 = 220;
+        $("#startDiv").click(function () {
+            let speed9 = 110;
             $("#balloon9").animate({bottom: "-0vh"}, speed9 * speed9, "linear");
             speed9++;
         })
-        $("#balloon6").click(function () {
-            let speed10 = 220;
+        $("#startDiv").click(function () {
+            let speed10 = 125;
             $("#balloon10").animate({bottom: "-0vh"}, speed10 * speed10, "linear");
             speed10++;
         })
+
+        /*let i=1;
+        while (i<0){
+            balloonArray.balloon1.show();
+            balloonArray.balloon2.show();
+            balloonArray.balloon3.show();
+            balloonArray.balloon4.show();
+            balloonArray.balloon5.show();
+            balloonArray.balloon6.show();
+            balloonArray.balloon7.show();
+            balloonArray.balloon8.show();
+            balloonArray.balloon9.show();
+            balloonArray.balloon10.show();
+
+        }*/
     }
 
 
