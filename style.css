@@ -1,0 +1,85 @@
+#topic{
+    color: lightseagreen;
+    font-size: 38px;
+    font-family: serif;
+    top: 0;
+    left: 30vw;
+    position: absolute;
+    
+}
+
+#gameDiv{
+    top: 10vh;
+    height: 90vh;
+    width: 70vw;
+    left: 15vw;
+    background-color: aquamarine;
+    position: absolute;
+    
+}
+.balloon{
+    height: 80px;
+    width: 80px;
+    position: absolute;
+    border-radius: 50px 50px 50px 50px;
+    cursor: pointer;
+}
+#balloon1{
+   background-color: blue;
+    left: 10vw;
+
+}
+#balloon2{
+    background-color: red;
+    left: 20vw;
+}
+#balloon3{
+    background-color: yellow;
+    left: 32vw;
+
+}
+#balloon4{
+    background-color: green;
+    left: 45vw;
+
+}
+#balloon5{
+    background-color: deeppink;
+    left: 60vw;
+    
+
+}
+#startDiv{
+    background-color: lightblue;
+    color: darkblue;
+    border-radius: 15px 15px 15px 15px;
+    position: absolute;
+    font-size: 25px;
+    padding: 10px;
+    margin: auto;
+    left: 65vw;
+    top: 2vh;
+    cursor: pointer;
+    
+}
+
+#scoreDiv{
+    background-color: greenyellow;
+    position: absolute;
+    left: 85vw;
+    font-size: 35px;
+    top: 2vh;
+    width: 10vw;
+    justify-content: center;
+    display: flex;
+    height: 7vh;
+    border-radius: 5px 5px 5px 5px;
+
+}
+#lineDiv{
+    width: 70vw;
+    height: 5vh;
+    background-color: black;
+    top: 70vh;
+    position: absolute
+}
