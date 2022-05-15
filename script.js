@@ -55,24 +55,28 @@ $(document).ready(function () {
 
 
     function repeat() {
-      //   let balloonCurrentPlace=parseInt(balloons.height());
-      //   let lineCurrentPlace=parseInt(lineDiv.height());
-      //   if (balloonCurrentPlace==lineCurrentPlace){
-      //     alert("text");
-      // }
+        let balloonCurrentPlace=parseInt(balloons.height());
+        let lineCurrentPlace=parseInt(lineDiv.height());
+        if (balloonCurrentPlace==lineCurrentPlace){
+          // heightOfBalloon=balloonCurrentPlace;
+      }
     }
 
 
     function restart() {
-        let balloonPlace=parseInt(balloons.bottom());
-        $("#h1Score").text(balloonPlace)
+        // let balloonPlace=parseInt(balloons.height());
+
         // let linePlace=parseInt(lineDiv.height());
-        // if (balloonPlace==20) {
-        //     repeat();
-        // }else {
-        //     gameDiv.text("Game Over");
-        //     h1Score.css("color","red");
-        // }
+        // $("#topic").text(linePlace)
+        let balloonTop=parseInt(balloons.height());
+        $("#h1Score").text(balloonTop);
+        if (balloonTop!=333) {
+            repeat();
+        }else {
+            gameDiv.text("Game Over");
+            h1Score.css("color","red");
+
+        }
     }
 
 
