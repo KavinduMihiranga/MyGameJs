@@ -45,10 +45,35 @@
 }
 #balloon5{
     background-color: deeppink;
-    left: 60vw;
-    
+    left: 60vw; 
+}
+
+#balloon6{
+    background-color: darkcyan;
+    left: 55vw;
+}
+#balloon7{
+    background-color: lightblue;
+    left: 35vw; 
+
+}#balloon8{
+    background-color: lightgreen;
+    left: 27vw; 
 
 }
+#balloon9{
+    background-color: cyan;
+    left: 15vw; 
+
+}
+#balloon10{
+    background-color: sandybrown;
+    left: 12vw; 
+
+}
+
+
+
 #startDiv{
     background-color: lightblue;
     color: darkblue;
