@@ -137,28 +137,28 @@ $(document).ready(function () {
             $("#balloon5").animate({bottom: "-0vh"}, speed5 * speed5, "linear");
             speed5++;
         })
-        $("#startDiv").click(function () {
+        $("#balloon1").click(function () {
             let speed6 = 250;
             $("#balloon6").animate({bottom: "-0vh"}, speed6 * speed6, "linear");
             speed6++;
         })
-        $("#startDiv").click(function () {
-            let speed7 = 150;
+        $("#balloon2").click(function () {
+            let speed7 = 250;
             $("#balloon7").animate({bottom: "-0vh"}, speed7 * speed7, "linear");
             speed7++;
         })
-        $("#startDiv").click(function () {
-            let speed8 = 100;
+        $("#balloon3").click(function () {
+            let speed8 = 200;
             $("#balloon8").animate({bottom: "-0vh"}, speed8 * speed8, "linear");
             speed8++;
         })
-        $("#startDiv").click(function () {
-            let speed9 = 120;
+        $("#balloon4").click(function () {
+            let speed9 = 220;
             $("#balloon9").animate({bottom: "-0vh"}, speed9 * speed9, "linear");
             speed9++;
         })
-        $("#startDiv").click(function () {
-            let speed10 = 120;
+        $("#balloon6").click(function () {
+            let speed10 = 220;
             $("#balloon10").animate({bottom: "-0vh"}, speed10 * speed10, "linear");
             speed10++;
         })
